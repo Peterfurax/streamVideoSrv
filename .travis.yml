@@ -9,7 +9,6 @@ env:
   - TRAVIS_NODE_VERSION="4"
   - TRAVIS_NODE_VERSION="6"
 install:
-  - clone https://github.com/Peterfurax/streamVideoSrv.git
   - nvm install $TRAVIS_NODE_VERSION
   - node --version
   - npm --version
