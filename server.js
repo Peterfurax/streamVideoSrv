@@ -18,9 +18,7 @@ http.createServer((req, res) => {
             file.on('end', () => {
                 console.log('filename [' + filename + '] Finished')
             })
-            // console.log('file :', file,'fieldname :', fieldname,  'filename :', filename, 'encoding :', encoding, 'mimetype :', mimetype)
             const saveTo = path.join(os.tmpDir(), path.basename(filename))
-            // file.resume()
             file.pipe(fs.createWriteStream(saveTo))
         })
         busboy.on('finish', () => {
