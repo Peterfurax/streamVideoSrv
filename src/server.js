@@ -15,14 +15,14 @@ http.createServer((req, res) => {
     console.log(req.headers);
     // busboy init on file datastream type
     busboy.on('file', (fieldname, file, filename, encoding, mimetype) => {
-      console.log('filename: ' + filename + ', encoding: ' + encoding + ', mimetype: ' + mimetype);
+      console.log('Filename: ' + filename + ', encoding: ' + encoding + ', mimetype: ' + mimetype);
       // busboy on progress
       file.on('data', data => {
-        console.log('filename [' + filename + '] got ' + data.length + ' bytes');
+        console.log('Filename [' + filename + '] got ' + data.length + ' bytes');
       });
       // busboy end transfert, error
       file.on('end', () => {
-        console.log('filename [' + filename + '] Finished');
+        console.log('Filename [' + filename + '] Finished');
       });
       // saveFolder dir, filemane
       const saveTo = path.join(os.tmpDir(), path.basename(filename));
@@ -47,5 +47,5 @@ http.createServer((req, res) => {
   res.end();
   // open http server on HTTP_PORT
 }).listen(HTTP_PORT, () => {
-  console.log('waiting on port', HTTP_PORT);
+  console.log('Waiting on port', HTTP_PORT);
 });
