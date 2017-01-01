@@ -23,7 +23,7 @@ module.exports = function (grunt) {
         }
       },
       build: {
-        src: 'build/server.js', 'test/*.js',
+        src: 'build/server.js',
         dest: 'dist/server.min.js'
       }
     },
