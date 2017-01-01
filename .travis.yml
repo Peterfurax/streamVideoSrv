@@ -1,12 +1,12 @@
 sudo: false
-language: cpp
+language: node_js
 notifications:
   email: false
 env:
   matrix:
-  - TRAVIS_NODE_VERSION="0.10"
-  - TRAVIS_NODE_VERSION="0.12"
-  - TRAVIS_NODE_VERSION="4"
+  #- TRAVIS_NODE_VERSION="0.10"
+  #- TRAVIS_NODE_VERSION="0.12"
+  #- TRAVIS_NODE_VERSION="4"
   - TRAVIS_NODE_VERSION="6"
 install:
   - nvm install $TRAVIS_NODE_VERSION
@@ -15,5 +15,4 @@ install:
   - npm install
 before_script:
   - node_modules/grunt/bin/grunt
-  - node dist/server.min.js
 script: npm test

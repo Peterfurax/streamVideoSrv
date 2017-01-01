@@ -10,7 +10,7 @@
   "dependencies": {},
   "devDependencies": {},
   "scripts": {
-    "test": "mocha"
+    "test": "node dist/server.min.js & mocha"
   },
   "repository": {
     "type": "git",
