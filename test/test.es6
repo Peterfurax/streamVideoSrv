@@ -1,3 +1,4 @@
+/*jshint esversion: 6 */
 // Require the dev-dependencies
 let fs = require('fs');
 let chai = require('chai');
@@ -9,10 +10,22 @@ let should = chai.should();
 process.env.NODE_ENV = 'test';
 // Chai use
 chai.use(chaiHttp);
-
+describe('app', () => {
+  describe('#port', () => {
+    it('should be a number', (done) => {
+      server.port.should.be.a('number');
+      (10).should.not.equal(0);
+      done();
+    });
+    it('should be equal to 8000', (done) => {
+      server.port.should.equal(8e3);
+      done();
+    });
+  });
+});
 describe('Api response ', () => {
-  describe('POST', () => {
-    it('should accept /POST image multipart/form-data to : / ', (done) => {
+  describe('#POST()', () => {
+    it('should accept image multipart/form-data to : / ', (done) => {
       chai.request(server).post('/')
       .set('content-type', 'multipart/form-data')
       .attach('imageField', fs.readFileSync('test/img.jpg'), 'img.jpg')
@@ -21,7 +34,7 @@ describe('Api response ', () => {
         done();
         });
     });
-    it('should accept /POST video multipart/form-data to : / ', (done) => {
+    it('should accept video multipart/form-data to : / ', (done) => {
       chai.request(server).post('/')
       .set('content-type', 'multipart/form-data')
       .attach('imageField', fs.readFileSync('test/video.mp4'), 'video.mp4')
@@ -31,7 +44,7 @@ describe('Api response ', () => {
         });
     });
   });
-  describe('GET', () => {
+  describe('#GET', () => {
     it('should accept /GET to : / ', (done) =>{
       chai.request(server)
       .get('/')
