@@ -1,13 +1,14 @@
 'use strict';
+
 var http = require('http'),
-  path = require('path'),
-  os = require('os'),
-  fs = require('fs'),
-  Busboy = require('busboy');
+    path = require('path'),
+    os = require('os'),
+    fs = require('fs'),
+    Busboy = require('busboy');
 var HTTP_PORT = 8000;
 // http createServer
 http.createServer(function (req, res) {
-  // POST req.method
+  // POST req.methode
   if (req.method === 'POST') {
     // busboy init capture req.headers
     var busboy = new Busboy({
