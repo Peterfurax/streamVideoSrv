@@ -1,3 +1,4 @@
+/*jslint node: true */
 /*jshint esversion: 6 */
 const path = require('path');
 const os = require('os');
