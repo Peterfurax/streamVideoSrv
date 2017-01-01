@@ -1,5 +1,5 @@
 'use strict';
-
+/*jslint node: true */
 /*jshint esversion: 6 */
 var path = require('path');
 var os = require('os');

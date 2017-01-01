@@ -1,6 +1,6 @@
 {
   "name": "streamvideosrv",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "node server data stream",
   "main": "src/server.js",
   "srcfile": "server.js",
@@ -44,4 +44,6 @@
     "url": "https://github.com/Peterfurax/streamVideoSrv/issues"
   },
   "homepage": "https://github.com/Peterfurax/streamVideoSrv#readme"
+}
+thub.com / Peterfurax / streamVideoSrv# readme "
 }
