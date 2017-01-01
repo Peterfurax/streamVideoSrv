@@ -1,51 +1,90 @@
-- 1.0.1
-## NEW
-### Task runner
-#### Grunt
-Install globlaly for easy use `$ npm install -g grunt-cli` or use `/node_modules/$gruntPath`
-###### Task(s) added
-   - Default Task `$ grunt` or `$ grunt default`
-     - JsHint
+# version - 1.0.2
 
-        Jshint files
-     ```javascript
-        { files: ['Gruntfile.js', '<%= pkg.main %>'] }
-     ```
-       - Options
+01/01/2017
 
-         ```javascript
-         {
-           "node": true,
-           "esversion": 6
-         }
-         ```
+## New
 
-     - Babel
+### Build runner
 
-        Babelify '<%= pkg.main %>' to build
-      ```javascript
-        "options": {
-          "presets": ['es2015'],
-          "sourceMap": false
-        },
-        dist: {
-          files: [{
-            "expand": true,
-            "cwd": "src/",
-            "src": ["<%= pkg.main %>"],
-            "dest": "build/",
-            "ext": ".js"
-          }]
-        }
-      ```
-     - Uglify
+#### Travis
 
-      Minify, uglify & drop console.* to `# ./dist/server.min.js`
-     ```javascript
-     {"drop_console": true}
-     ```
-   - Watch Task `$ grunt watch`
-     - Livereload `$ grunt default` on save  `# ./src/server.js`
+[Travis Project link](https://travis-ci.org/Peterfurax/streamVideoSrv)
+
+```
+$ nvm node 4 & 6
+$ npm install
+$ grunt default
+$ node dist/server.min.js & mocha
+```
+
+### Unit Test
+
+#### Mocha
+
+#### Chai
+
+#### Chai-http
+
+# version - 1.0.1
+
+30/12/2016
+
+# New
+
+## Task runner
+
+### Grunt
+
+Install globlaly for easy use `$ npm install -g grunt-cli` or use `/node_modules/grunt/bin/grunt <task>`
+
+#### Task(s) added
+
+- Default Task `$ grunt` or `$ grunt default`
+
+  - JsHint
+
+    Jshint files
+
+    ```javascript
+    { files: ['Gruntfile.js', '<%= pkg.main %>'] },    
+      {
+        "node": true,
+        "esversion": 6
+      }
+    ```
+
+  - Babel
+
+    Babelify '<%= pkg.main %>' to build
+
+    ```javascript
+    "options": {
+       "presets": ['es2015'],
+       "sourceMap": false
+     },
+     dist: {
+       files: [{
+         "expand": true,
+         "cwd": "src/",
+         "src": ["<%= pkg.main %>"],
+         "dest": "build/",
+         "ext": ".js"
+       }]
+     }
+    ```
+
+  - Uglify
+
+    Minify, uglify & drop console.* to `# ./dist/server.min.js`
+
+    ```javascript
+    {"drop_console": true}
+    ```
+
+- Watch Task `$ grunt watch`
+
+  - Livereload `$ grunt default` on save `# ./src/server.js`
 
 - 1.0.0
- - init
+
+  - init
