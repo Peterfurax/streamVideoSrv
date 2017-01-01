@@ -19,8 +19,9 @@ app.route("/")
 
 function getReceiver(req, res) {
   res.json({
-    message: "getd!"
+    message: "you will get nothing here"
   });
+  res.end();
 }
 
 function postReceiver(req, res) {

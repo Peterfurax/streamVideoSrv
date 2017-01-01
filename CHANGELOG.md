@@ -1,3 +1,5 @@
+![travis](https://travis-ci.org/Peterfurax/streamVideoSrv.svg?branch=master)
+
 # version - 1.0.2
 
 01/01/2017
