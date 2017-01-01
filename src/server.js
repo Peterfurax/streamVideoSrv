@@ -6,7 +6,7 @@ const http = require('http'),
 const HTTP_PORT = 8000;
 // http createServer
 http.createServer((req, res) => {
-  // POST req.methode 
+  // POST req.methode
   if (req.method === 'POST') {
     // busboy init capture req.headers
     const busboy = new Busboy({

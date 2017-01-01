@@ -13,5 +13,7 @@ install:
   - node --version
   - npm --version
   - npm install
-before_script: grunt default
-script: node /dist/server.min.js
+before_script:
+  - node_modules/bin/grunt default
+  - node dist/server.min.js
+script: npm test
