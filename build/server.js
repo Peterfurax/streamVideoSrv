@@ -1,10 +1,9 @@
 'use strict';
-
 var http = require('http'),
-    path = require('path'),
-    os = require('os'),
-    fs = require('fs'),
-    Busboy = require('busboy');
+  path = require('path'),
+  os = require('os'),
+  fs = require('fs'),
+  Busboy = require('busboy');
 var HTTP_PORT = 8000;
 // http createServer
 http.createServer(function (req, res) {
@@ -17,14 +16,14 @@ http.createServer(function (req, res) {
     console.log(req.headers);
     // busboy init on file datastream type
     busboy.on('file', function (fieldname, file, filename, encoding, mimetype) {
-      console.log('filename: ' + filename + ', encoding: ' + encoding + ', mimetype: ' + mimetype);
+      console.log('Filename: ' + filename + ', encoding: ' + encoding + ', mimetype: ' + mimetype);
       // busboy on progress
       file.on('data', function (data) {
-        console.log('filename [' + filename + '] got ' + data.length + ' bytes');
+        console.log('Filename [' + filename + '] got ' + data.length + ' bytes');
       });
       // busboy end transfert, error
       file.on('end', function () {
-        console.log('filename [' + filename + '] Finished');
+        console.log('Filename [' + filename + '] Finished');
       });
       // saveFolder dir, filemane
       var saveTo = path.join(os.tmpDir(), path.basename(filename));
@@ -49,5 +48,5 @@ http.createServer(function (req, res) {
   res.end();
   // open http server on HTTP_PORT
 }).listen(HTTP_PORT, function () {
-  console.log('waiting on port', HTTP_PORT);
+  console.log('Waiting on port', HTTP_PORT);
 });
