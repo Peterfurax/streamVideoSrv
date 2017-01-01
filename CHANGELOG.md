@@ -2,11 +2,9 @@
 
 01/01/2017
 
-## New
+## Build runner (new)
 
-### Build runner
-
-#### Travis
+### Travis
 
 [Travis Project link](https://travis-ci.org/Peterfurax/streamVideoSrv)
 
@@ -17,13 +15,12 @@ $ grunt default
 $ node dist/server.min.js & mocha
 ```
 
-### Unit Test
+## Unit Test (new)
 
-#### Mocha
-
-#### Chai
-
-#### Chai-http
+- Mocha
+- Chai
+- Chai-http
+- Should
 
 # version - 1.0.1
 
