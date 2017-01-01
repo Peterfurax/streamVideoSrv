@@ -1,13 +1,11 @@
 sudo: false
-language: node_js
+language: cpp
 notifications:
   email: false
 env:
   matrix:
-  #- TRAVIS_NODE_VERSION="0.10"
-  #- TRAVIS_NODE_VERSION="0.12"
-  #- TRAVIS_NODE_VERSION="4"
   - TRAVIS_NODE_VERSION="4"
+  - TRAVIS_NODE_VERSION="6"
 install:
   - nvm install $TRAVIS_NODE_VERSION
   - node --version
