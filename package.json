@@ -1,6 +1,6 @@
 {
   "name": "streamvideosrv",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "node server data stream",
   "main": "src/server.js",
   "srcfile": "server.js",
