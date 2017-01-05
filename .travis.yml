@@ -7,7 +7,6 @@ node_js:
   - "6"
   - "5"
   - "4"
-  - "0.12"
 cache:
   directories:
     - node_modules
@@ -16,7 +15,6 @@ install:
   - npm --version
   - npm install
   - npm install -g grunt
-before_script:
-  - npm run build
+  - npm install -g docco
 script: npm test
 after_success: npm run coverage
